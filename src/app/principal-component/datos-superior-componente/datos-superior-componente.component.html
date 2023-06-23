@@ -1,44 +1,71 @@
-<div>
-  <!-- UNICA COLUMNA PRINCIPAL-->
-  <div class="col-md-12">
-    <!-- UNICA FILA PRINCIPAL-->
-    <!--JUNTO CON LA COLUMNA, FORMAN UNA CELDA-->
-    <div class="row">
-      <div class="col-xs-4 col-sm-4 col-md-4">
-
-        <label>Pedrio:</label>
-        <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Seleccione un predio
-        </button>
-        <br>
-        <br>
-        <label>Periodo de la cuota: </label>
-        <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Seleccione un predio
-      </button>
-        <br>
-        <br>
-
-        <label>Presidente del predio:</label><label>Juan Carlos</label>
+<section>
+  <div class="section0">
+    <div class="section1">
+      <div class="flexy">
+        <div class="text-center-v">
+          <p class="text-1 tab-1"><b>Predio</b></p>
+        </div>
+        <div>
+          <div class="wrapper" [ngClass]="{'active': isActivePredios}">
+            <div class="select-btn" (click)="toggleActivePredios()">
+              <span>{{selectedItemPredios}}</span>
+              <i class="uil uil-angle-down"></i>
+            </div>
+            <div class="content">
+              <div class="search">
+                <i class="uil uil-search"></i>
+                <input type="text" placeholder="Buscar" [(ngModel)]="searchValuePredios" (keyup)="filterItemsPredios()">
+              </div>
+              <ul class="options">
+                <li *ngFor="let item of filteredItemsPredios" (click)="selectItemPredios(item)"
+                  [ngClass]="{'selected': item === selectedItemPredios}">
+                  {{item}}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <div class="col-xs-6 col-sm-6 col-md-6">
-        <h1>Gastos del Predio no registrados!</h1>
-        <h1>Cuotas de caja chica no generadas!</h1>
+      <div class="flexy">
+        <div class="text-center-v">
+          <p class="text-1 tab-1"><b>Periodo</b></p>
+        </div>
+        <div>
+          <div class="wrapper1" [ngClass]="{'active': isActiveMeses}">
+            <div class="select-btn1" (click)="toggleActiveMeses()">
+              <span>{{selectedItemMeses}}</span>
+              <i class="uil uil-angle-down"></i>
+            </div>
+            <div class="content1">
+              <div class="search">
+                <i class="uil uil-search"></i>
+                <input type="text" placeholder="Periodo de la cuota" [(ngModel)]="searchValueMeses" (keyup)="filterItemsMeses()">
+              </div>
+              <ul class="options1">
+                <li *ngFor="let item of filteredItemsMeses" (click)="selectItemMeses(item)"
+                  [ngClass]="{'selected': item === selectedItemMeses}">
+                  {{item}}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <div class="col-xs-2 col-sm-2 col-md-2">
-        <h2>Acciones</h2>
-        <div class="button-row">
-          <button type="submit" class="btn btn-primary">Button 1</button>
-          <br>
-          <br>
-          <button type="submit" class="btn btn-primary">Button 2</button>
-          <br>
-          <br>
-          <button type="submit" class="btn btn-primary">Button 3</button>
+      <div class="flexy">
+        <div class="text-center-v">
+          <p class="text-1 tab-1"><b>Presidente predio</b></p>
+        </div>
+        <div class="text-center-v">
+          <p style="margin: 0 0 0 10px;">Nombre_Presidente_Predio</p>
         </div>
       </div>
     </div>
+    <!-- 
+    <div class="section2">
+    </div>
+    <div class="section3">
+    </div>
+
+    -->
   </div>
-</div>
+</section>
