@@ -21,15 +21,31 @@ export class DatosSuperiorComponenteComponent implements OnInit {
   isActivePredios: boolean = false;
   isActiveMeses: boolean = false;
 
-  predios = ["Afghanistan", "Algeria", "Argentina", "Australia", "Bangladesh", "Belgium", "Bhutan",
-    "Brazil", "Canada", "China", "Denmark", "Ethiopia", "Finland", "France", "Germany",
-    "Hungary", "Iceland", "India", "Indonesia", "Iran", "Italy", "Japan", "Malaysia",
-    "Maldives", "Mexico", "Morocco", "Nepal", "Netherlands", "Nigeria", "Norway", "Pakistan",
-    "Peru", "Russia", "Romania", "South Africa", "Spain", "Sri Lanka", "Sweden", "Switzerland",
-    "Thailand", "Turkey", "Uganda", "Ukraine", "United States", "United Kingdom", "Vietnam"];
+  predios = [
+    "Residencial Los Alamos",
+    "Condominio Las Rosas",
+    "Residencial Parque del Sol",
+    "Residencial Villa Esperanza",
+    "Condominio Jardines de la Montaña",
+    "Condominio Riviera del Lago",
+    "Residencial El Bosque Encantado",
+    "Mirador del Valle",
+    "Paseo del Río",
+    "Brisas del Mar",
+    "La Hacienda",
+    "Altos del Cielo",
+    "Monte Verde",
+    "Los Pinos",
+    "Sol Naciente",
+    "Vista Hermosa",
+    "El Paraíso",
+    "Amanecer Dorado",
+    "El Oasis",
+    "Rincón del Lago"
+  ];
 
   meses = ["Enero-23", "Febrero-23", "Marzo-23", "Abril-23"];
-
+  presidente ="Ávalos Cuadros, Juan Carlos";
   constructor() { }
 
   ngOnInit() {

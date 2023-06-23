@@ -5,6 +5,45 @@
     padding: 0;
     font-family: 'Open Sans', sans-serif;
 }
+
+.boton_acciones {
+    background-color: #007bff;
+    /* Color de fondo azul genérico */
+    color: white;
+    /* Color del texto */
+    padding: 7px 30px;
+    /* Espaciado interno */
+    font-size: 14px;
+    /* Tamaño de fuente */
+    border: none;
+    /* Sin borde */
+    cursor: pointer;
+    /* Cursor estilo puntero */
+    margin-bottom: 10px;
+    /* Margen inferior*/
+    width: 250px; /* Ancho del botón */
+}
+
+.boton_acciones:hover {
+    background-color: #0069d9;
+    /* Color de fondo al pasar el cursor */
+}
+
+.boton_acciones:active {
+    background-color: #0056b3;
+    /* Color de fondo al hacer clic */
+}
+
+.aviso-predio {
+    font-size: 1.25rem;
+    margin: 0.2rem;
+}
+
+.aviso-cajachica {
+    font-size: 1.25rem;
+    margin: 0.2rem;
+}
+
 /*X buscador */
 .close-btn {
     position: absolute;
@@ -32,7 +71,8 @@ section {
 .section1 {
     margin-top: 1rem;
     margin-bottom: 1rem;
-    min-height: 25vh;/*ALTURA*/
+    min-height: 25vh;
+    /*ALTURA*/
     background-color: var(--color-fondo);
     border: 1px solid var(--blue-navy-clrclr);
     border-radius: 5px;
@@ -209,7 +249,7 @@ li.selected {
     background: #f2f2f2;
 }
 
-.text-center-v {
+.text-estilo-principal {
     display: flex;
     height: 60px;
     width: 250px;

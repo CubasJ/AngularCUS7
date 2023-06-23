@@ -1,5 +1,38 @@
 <div class="seccion-tabla-detalles">
     <div class="seccion-tabla">
-        <!-- contenido de la sección -->
+        <div class="container">
+            <div class="table-wrapper">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Nro. Casa/habitación</th>
+                    <th>Bloque</th>
+                    <th>Propietario</th>
+                    <th>Categoría</th>
+                    <th>Área casa(m2)</th>
+                    <th>Cochera1(m2)</th>
+                    <th>Área total</th>
+                    <th>% Participación</th>
+                    <th>Estado</th> <!-- Nueva columna -->
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let dato of datos">
+                    <td>{{ dato.nroCasa }}</td>
+                    <td>{{ dato.bloque }}</td>
+                    <td>{{ dato.propietario }}</td>
+                    <td>{{ dato.categoria }}</td>
+                    <td>{{ dato.areaCasa }}</td>
+                    <td>{{ dato.cochera1 }}</td>
+                    <td>{{ dato.areaTotal }}</td>
+                    <td>{{ dato.participacion }}</td>
+                    <td><i class="fa-solid fa-square" style="color: #1ebe38;"></i></td>
+                  </tr>
+                </tbody>
+              </table>
+              <i class="fa-solid fa-square" style="color: #1ebe38;"></i>
+            </div>
+          </div>
+          
     </div>
 </div>
