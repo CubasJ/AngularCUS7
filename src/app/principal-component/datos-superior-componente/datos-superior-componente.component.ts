@@ -66,5 +66,11 @@ export class DatosSuperiorComponenteComponent implements OnInit {
   filterItemsMeses(): void {
     this.filteredItemsMeses = this.meses.filter(item => item.toLowerCase().startsWith(this.searchValueMeses.toLowerCase()));
   }
-
+  closeComboboxPredios(): void {
+    this.isActivePredios = false;
+  }
+  
+  closeComboboxMeses(): void {
+    this.isActiveMeses = false;
+  }
 }
